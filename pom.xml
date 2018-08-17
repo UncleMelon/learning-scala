@@ -14,7 +14,7 @@
     </properties>
 
     <dependencies>
-    <!--内部模块依赖 start-->
+        <!--内部模块依赖 start-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -31,6 +31,14 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api-scala_2.12</artifactId>
             <version>11.0</version>
+        </dependency>
+
+        <!-- scala test -->
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_2.12</artifactId>
+            <version>3.2.0-SNAP9</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
