@@ -70,6 +70,7 @@ object Element {
   }
 
   def elem(ch: Char, width:Int, height: Int): Element = {
+    if (width < 0) throw new IllegalArgumentException
     new UniformElement(ch, width, height)
   }
 
