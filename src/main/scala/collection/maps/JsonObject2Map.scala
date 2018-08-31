@@ -8,9 +8,14 @@ object JsonObject2Map {
   def main(args: Array[String]): Unit = {
     val str = "{\"a\": {\"b\":1, \"c\":2, \"d\":3, \"e\":4}}"
     val jsonObject = JSON.parseObject(str)
-    val map = jsonObject.asInstanceOf[JMap[String, JMap[_, _]]]
+    val map = jsonObject.asInstanceOf[JMap[String, JMap[_, _]]].asScala
     println("xxx")
     println(JSON.toJSONString(jsonObject, false))
 
+  }
+
+
+  def toScalaMap(jsonObject: JSONObject) = jsonObject.asInstanceOf[JMap[String, Any]] match {
+    case s: JMap[String, Any] => s.asScala
   }
 }
